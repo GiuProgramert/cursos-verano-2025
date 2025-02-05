@@ -5,7 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+      @theme {
+        --font-fjalla: "Fjalla One", "serif";
+        --font-work-sans: "Fjalla One", "serif";
+      }
+    </style>
+
     <title>Clase 3 maquetación GRID</title>
   </head>
-  <body></body>
+  <body class="font-fjalla h-screen">
+
+    <nav class="bg-black flex sm:block flex-col gap-2 items-center pb-6  md:pb-[0px]">
+      <header class="flex flex-col sm:flex-row gap-6 sm:pb-auto justify-between items-center px-[40px] md:px-[119px] py-3">
+        <img src="./assets/logo.png" alt="Logo" width="91" height="72">
+        
+        <input type="text" placeholder="O que você procura?" class="border-2 border-white rounded-[10px] font-work-sans placeholder:text-white placeholder:font-work-sans text-[16px] p-[11px] opacity-50 w-[382px] hidden md:block " >
+      
+        <ul class="text-white flex gap-20">
+          <li class="text-xl"><a href="#">Programación</a></li>
+          <li class="text-xl"><a href="#">Categorías</a></li>
+          <li class="text-xl"><a href="#">Seu local</a></li>
+        </ul>
+      </header>
+      <div class="block md:hidden">
+        <input type="text" placeholder="O que você procura?" class="border-2 border-white rounded-[10px] font-work-sans placeholder:text-white placeholder:font-work-sans text-[16px] p-[11px] opacity-50 w-[382px]" >
+      </div>
+    </nav>
+
+    <main class="md:px-[120px] px-[40px] pb-10">
+      <section class="grid grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 gap-[24px] mb-10">
+        <img class="col-span-2 row-span-2 w-full object-contain" src="./assets/Banner1.png" width="588" height="464" alt="imagen 1">
+        <img class="row-start-3 sm:row-start-2 sm:col-start-3 w-full object-contain" src="./assets/Banner2.png" width="282" height="219" alt="imagen 2">
+        <img class="row-start-4 sm:row-start-1 sm:col-start-3 w-full object-contain" src="./assets/Banner3.png " width="282" height="219" alt="imagen 3">
+        <img class="row-span-2 w-full object-contain" src="./assets/Banner4.png" width="282" height="464" alt="imagen 4">
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
+        <div class="grid grid-cols-1 sm:grid-cols-2 grid-rows-8 sm:grid-rows-4 gap-x-[24px] gap-y-[16px] text-xl text-white uppercase">
+          <div class="py-[20px] px-[16px] h-[64px] bg-[#FFC756] grid place-content-center">Shows</div>
+          <div class="py-[20px] px-[16px] h-[64px] bg-[#FFC756] grid place-content-center">Arte</div>
+          <div class="py-[20px] px-[16px] h-[64px] bg-[#F66139] grid place-content-center">Teatro</div>
+          <div class="py-[20px] px-[16px] h-[64px] bg-[#F66139] grid place-content-center">Fotografia</div>
+          <div class="py-[20px] px-[16px] h-[64px] bg-[#7F8FFE] grid place-content-center">Festivales</div>
+          <div class="py-[20px] px-[16px] h-[64px] bg-[#7F8FFE] grid place-content-center">Tecnología</div>
+          <div class="py-[20px] px-[16px] h-[64px] bg-[#56B78C] grid place-content-center">Cine</div>
+          <div class="py-[20px] px-[16px] h-[64px] bg-[#56B78C] grid place-content-center">Diseño</div>
+        </div>
+
+        <div class="flex flex-col justify-between">
+          <div class="flex gap-2 justify-between items-center mb-2">
+            <span class="text-xl">Destaques</span>
+            <hr class="border-2 border-black w-[500px]">
+            <div class="flex gap-2">
+              <div class="bg-black rounded-full w-[24px] h-[24px] p-2 grid place-content-center">
+                <img src="./assets/arrow.svg" width="16" height="16" alt="Flecha">
+              </div>
+              <div class="bg-black rounded-full rotate-180 w-[24px] h-[24px] p-2 grid place-content-center" class="w-[24px] h-[24px]">
+                <img src="./assets/arrow.svg" width="16" height="16" alt="Flecha">
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img src="./assets/img1.png" alt="Imagen 1" width="588" height="224px" class="w-full object-contain">
+            <span class="absolute bottom-[24px] text-white bg-[#aaaaaa9e] p-[10px]">Presentación de danza</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </body>
 </html>
