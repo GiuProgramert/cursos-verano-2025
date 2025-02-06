@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+
+        .btn, .input {
+            @apply px-4 py-2 rounded-lg shadow-md font-medium;
+        }
+
+        .btn-primary {
+            @apply bg-orange-400 hover:bg-orange-500 text-white;
+        }
+
+        .btn-outlined-primary {
+            @apply border border-orange-400 text-orange-500 hover:bg-gray-100;
+        }
+
+        .input-primary {
+            @apply border border-orange-400 placeholder:text-gray-700 invalid:border-red-500 invalid:text-red-500;
+        }
+
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <main class="h-screen flex justify-center items-center gap-4">
+        <form action="">
+            <input type="text" class="input input-primary" placeholder="ingrese un texto">
+            <input type="email" class="input input-primary" placeholder="email">
+            <input type="password" class="input input-primary" placeholder="contraseña">
+
+            <button class="btn btn-primary">Prueba</button>
+            <button class="btn btn-outlined-primary" type="submit">Prueba</button>
+        </form>
+    </main>
+</body>
+</html>
